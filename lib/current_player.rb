@@ -9,7 +9,7 @@ end
 end
 
 def current_player(board)
-  player = turn_count(board)
+  player = turn_count(board) - 1
   if player % 2
     return "O"
   else
