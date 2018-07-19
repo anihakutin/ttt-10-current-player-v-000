@@ -9,15 +9,10 @@ end
 end
 
 def current_player(board)
-  counter = 0
-  board.each do |place|
-    if place == "X" || place == "O"
-      counter += 1
-    end
+  player = turn_count(board)
+  if player % 2
+    return "O"
+  else
+    return "X"
   end
-    if counter % 2
-      return "O"
-    elsif counter % 1
-      return "X"
-    end
-  end
+end
